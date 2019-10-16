@@ -1,0 +1,39 @@
+<script>
+
+
+var num1;
+num1=parseInt(prompt('Que edad tienes?',''));
+var emp;
+num1=prompt('Estas empadronado?','');
+var abono;
+if((emp='no')||(emp='NO')){
+    if (num1 < 16) {
+  abono=60-(60*0.20);
+  document.write("El abono cuesta ", abono);
+}else if(16<num1 && num1<18){
+    abono=60-(60*0.15);
+    document.write("El abono cuesta ", abono);
+}else if(18<num1 && num1<65){
+    abono=60;
+    document.write("El abono cuesta ", abono);
+}else{
+    abono=60-(60*0.50);
+    document.write("El abono cuesta ", abono);
+}}else{
+    if (num1 < 16) {
+  abono=60-(60*0.30);
+  document.write("El abono cuesta ", abono);
+}else if(16<num1 && num1<18){
+    abono=60-(60*0.20);
+    document.write("El abono cuesta ", abono);
+}else if(18<num1 && num1<65){
+    abono=60-(60*0.05);
+    document.write("El abono cuesta ", abono);
+}else{
+    abono=60-(60*0.60);
+    document.write("El abono cuesta ", abono);
+}
+}
+
+
+</script>
