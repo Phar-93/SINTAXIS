@@ -1,0 +1,45 @@
+<html>
+<body>
+<script>
+    var res;
+   confirm("Quieres un helado?");
+   var precio =1.90;
+   var preciofinal;
+   document.write("Que opcion quieres?");
+   document.write("Helado sin topping, pulsa 1");
+   document.write("Topping oreo, pulsa 2");
+   document.write("Topping Kitkat, pulsa 3");
+   document.write("Topping Brownie, pulsa 4");
+   document.write("Topping Lacasitos, pulsa 5");
+   res=parseInt(prompt('Ingresa la opcion: ',''));
+
+
+switch (res) {
+  case 1:
+  document.write("Tu helado sin topping cuesta", precio);
+    break;
+  case 2:
+    preciofinal=precio+1;
+  document.write("Tu helado de oreo cuesta", preciofinal);
+    break;
+  case 3:
+  preciofinal=precio+1.50;
+  document.write("Tu helado de kitkat cuesta", preciofinal);
+    break;
+    case 4:
+    preciofinal=precio+0.75;
+  document.write("Tu helado de brownie cuesta", preciofinal);
+    break;
+    case 5:
+    preciofinal=precio+0.95;
+  document.write("Tu helado de lacasitos cuesta", preciofinal);
+    break;
+  default:
+  document.write("No tenemos ese topping");
+    break;
+}
+
+
+</script>
+</body>
+</html>
