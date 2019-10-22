@@ -1,0 +1,59 @@
+<html>
+<script>
+var res=parseInt(prompt('Ingresa un numero: ',''));
+
+function parimpar(res){
+    if (res%2==0){
+        document.write("ES PAR","<br>");
+    }else{
+        document.write("ES IMPAR","<br>");
+    }
+}
+
+function primo(res){
+    
+    var i,j;
+  var esPrimo;
+  var rInicial=2;//Rango inicial, este debe ser mayor de 1.
+  var rFinal = res;//Rango final.
+  for(i = rInicial;i <= rFinal;i++){
+  //recorro ciclo tantas veces como necesite(<= es para incluir el valor de rFinal).
+      esPrimo=true;// i es primo hasta que se demuestre lo contrario, jejejejeje.
+       for(j = 2;j < i;j++){
+       //no coloque j = 1 porque ya sabemos que todo numero es divisible por 1.
+       /*j < i es para no incluir el numero a evaluar, pues todo numero es divisible
+       por si mismo.*/
+       if(i % j == 0){//Si además del 1 y el mismo hay otro divisor, ya no es primo.
+         //% devuelve el residuo de i/j
+          esPrimo = false;//se demostró que i no es primo.
+       }
+       }
+       if(esPrimo){//Si es primo lo imprimo.
+        document.write("El numero ",i," es primo","<br>");
+       }
+  }
+}
+
+
+
+
+
+function info(){
+
+}
+
+parimpar(res);
+primo(res);
+
+
+
+</script>
+
+
+
+
+
+
+
+
+</html>
