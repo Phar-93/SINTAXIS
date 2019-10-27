@@ -1,0 +1,42 @@
+<html>
+<body>
+<script>
+var a1=[];
+var indices=[];
+indices=indices.fill(0);
+a1=rellenar(a1);
+document.write(a1,"<br>");
+var indices2=repe(a1);
+document.write(indices2);
+
+
+//funcion rellenar
+function rellenar(a1) {
+
+    for (var i = 0; i < 5; i++) {
+        var x = parseInt(prompt('Ingresa un numero: ',''));
+        a1[i] = x;
+    }
+
+return a1;
+}
+
+
+//funcion repetidos
+function repe(a1,indices) {
+let lo = a1.length;
+document.write(indices[2]);
+for (let i = 0; i < 5; i++) {
+
+    for (let j = 0; j < lo; j++) {
+        if (a1[i] == a1[j]) { 
+        indices[i] = indices[i] + 1;
+        }
+    }
+}
+return indices;
+}
+
+</script>
+</body>
+</html>
