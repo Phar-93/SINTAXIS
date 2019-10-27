@@ -1,0 +1,18 @@
+<html>
+<body>
+<script>
+var res=prompt('Escribe una cadena: ','');
+var a1=res.split(" ");
+document.write("El array tiene ",a1.length, " palabras. <br>");
+document.write("La primera palabra es ",a1[0], "<br>");
+var cont=a1.length-1;
+document.write("La ultima palabra es ",a1[cont], "<br>");
+var a2=a1.reverse();
+a2=a1.join("-");
+document.write("Las palabras en orden inverso y con guion es: ",a2, "<br>");
+document.write("El array ordenado de la A a la Z: ",a1.sort(), "<br>");
+var a3=a1.sort();
+document.write("El array ordenado de la Z a la A: ",a3.reverse(), "<br>");
+</script>
+</body>
+</html>
