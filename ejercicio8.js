@@ -1,25 +1,13 @@
-//var d = new Date();
-//var h = d.getUTCHours();
-//var m = d.getUTCMinutes();
-//var s = d.getUTCSeconds();
-
-
-function startTime() {
-    var today = new Date();
-    var hr = today.getHours();
-    var min = today.getMinutes();
-    var sec = today.getSeconds();
-    //Add a zero in front of numbers<10
-    min = checkTime(min);
-    sec = checkTime(sec);
-    document.getElementById("clock").innerHTML = hr + " : " + min + " : " + sec;
-    var time = setTimeout(function(){ startTime() }, 500);
-}
-function checkTime(i) {
-    if (i < 10) {
-        i = "0" + i;
-    }
-    return i;
+var reloj = 0;
+var frecuencia = 1000;
+function actualiza() {
+  var ahora = new Date();
+  var fecha = ahora.getDate() + " - " + (ahora.getMonth() + 1) + " - " + ahora.getFullYear();
+  var hora = ahora.getHours() + ":" + ahora.getMinutes() + ":" + ahora.getSeconds();
+  var escribe = 'Hoy es ' + fecha + ' y son las ' + hora + ' horas';
+  var situa = document.getElementById('capa0');
+  situa.innerHTML = escribe;
+  reloj = setTimeout("actualiza()", frecuencia);
 }
 
-startTime();
+actualiza();
