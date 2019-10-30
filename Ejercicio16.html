@@ -1,0 +1,52 @@
+<html>
+
+
+ <form id="formulario" method="Post">
+    Escribe la cadena     <input type="text" id="texto"/>
+                <input type="button" name="enviar" value="Enviar" onclick="validacion();"/><br>
+                <div id="txt"></div>
+                <p id="resul"></p>
+</form>
+<!--FORMULARIO TELEFONO-->
+<form id="formtele" method="Post">
+       Introduce un telefono <input type="text" id="textotel"/>
+        <input type="button" name="enviar" value="Enviar" onclick="telefono();"/><br>
+        <div id="txt"></div>
+        <p id="resul1"></p>
+</form>
+<!--FORMULARIO TELEFONO CON PREFIJO-->
+<Script>
+
+function validacion() {
+    
+    let reg =/^[A-Z].*\.$/;
+    let valor = document.getElementById("texto").value;
+    var resultado =document.getElementById("resul");
+        //document.getElementById("txt").innerHTML=valor;
+
+  if (reg.test(valor)==true) {
+   //document.write("bien");
+   resultado.innerHTML="Esto esta bien";
+  }
+  else{
+    resultado.innerHTML="Esto esta mal";
+   // document.write("mal");
+  }
+}
+
+
+function telefono() {
+    
+    let reg1=/^9[0-9]{8}$/;
+    let valor = document.getElementById("textotel").value;
+    var resultado =document.getElementById("resul1");
+
+  if (reg1.test(valor)==true) {
+   resultado.innerHTML="Esto esta bien";
+  }
+  else{
+    resultado.innerHTML="Esto esta mal";
+  }
+}
+</script>
+</html>
