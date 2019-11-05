@@ -1,0 +1,44 @@
+<html>
+
+        <form id="formulario" method="Post">
+                palabra nueva  <input type="text" id="texto"/>
+               PALABRA vieja<input type="text" id="texto1"/>
+               texto<textarea name="textarea" rows="10" cols="50" id="textaAREA"></textarea>
+                            <input type="button" name="enviar" value="Enviar" onclick="validacion();"/><br>
+                            <div id="txt"></div>
+                            <p id="resul"></p>
+            </form>
+
+<script>
+
+
+
+
+
+function validacion(){
+
+let valor = document.getElementById("texto").value;
+let valor1 = document.getElementById("texto1").value;
+let valor2 = document.getElementById("textaAREA").value;
+
+var n = valor2.indexOf(valor1);
+var newstr="";
+newstr = valor2.replace(valor1, valor, "gi");
+//document.write(n);
+
+while(n!=-1){  
+    newstr = newstr.replace(valor1, valor, "gi");
+    n = newstr.indexOf(valor1);
+}
+
+
+
+document.write(newstr);
+
+}
+
+
+
+
+</script>
+</html>

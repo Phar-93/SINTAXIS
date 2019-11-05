@@ -1,0 +1,37 @@
+<html>
+<script>
+var num1;
+num1=parseInt(prompt('Ingrese un numero',''));
+
+// Create one dimensional array 
+var gfg = new Array(num1); 
+  
+  document.write("Creating 2D array <br>"); 
+    
+  // Loop to create 2D array using 1D array 
+  for (var i = 0; i < gfg.length; i++) { 
+      gfg[i] = new Array(num1); 
+  } 
+    
+  var h = 0; 
+    // var sum=0;
+    // var z=0;
+  // Loop to initilize 2D array elements. 
+  for (var i = 0; i < num1; i++) { 
+      for (var j = 0; j < num1; j++) { 
+          gfg[i][j] = h++;
+      } 
+      document.write("<br>"); 
+  } 
+    
+  // Loop to display the elements of 2D array.  
+  for (var i = 0; i < num1; i++) { 
+      for (var j = 0; j < num1; j++)    { 
+          document.write(gfg[i][j] + " "); 
+      } 
+      document.write("<br>"); 
+  } 
+
+
+</script>
+</html>
