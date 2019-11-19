@@ -1,0 +1,32 @@
+<html>
+
+
+        <form id="formulario" method="Post">
+                Numero  <input type="number" id="texto"/>
+                            <input type="button" name="enviar" value="Enviar" onclick=" num();"/><br>
+                            <div id="txt"></div>
+                            <p id="resul"></p>
+            </form>
+
+<script>
+
+function num(){
+    let valor = document.getElementById("texto").value;
+    return valor;
+}
+var num = num();
+
+function voltear(valor){
+if(valor<10){
+    return valor;
+}else{
+    var tmp= "" + (valor % 10) + voltear(Math.floor(valor/10));
+return parseInt (tmp);
+}
+}
+
+document.write(voltear(num));
+resultado.innerHTML=voltear(num);
+
+</script>
+</html>

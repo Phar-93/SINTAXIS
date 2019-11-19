@@ -1,0 +1,18 @@
+<html>
+    <script>
+var num1;
+num1=parseInt(prompt('Ingrese un dividendo',''));     
+var num2;
+num2=parseInt(prompt('Ingrese un divisor',''));       
+
+function div(num1, num2){
+  if(num1 < num2){
+  return 0;
+  }else{
+    return div(num1-num2, num2)+1;
+  }
+}
+document.write(div(num1, num2));
+
+    </script>
+</html>

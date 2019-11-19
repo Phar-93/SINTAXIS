@@ -1,0 +1,30 @@
+<html>
+        <form id="formulario" method="Post">
+                mete el array, cerdo <input type="text" id="texto"/>
+                            <input type="button" name="enviar" value="Enviar" onclick="validacion();"/><br>
+                            <div id="txt"></div>
+                            <p id="resul"></p>
+            </form>
+    <script>
+
+
+    function validacion(){
+    var frutas = [];
+    let valor = document.getElementById("texto").value;
+    var txt = valor.replace(" ","");
+    var array=txt.split(",");
+        let cont=0;
+        for(let i =0;i< array.length-1;i++){
+            if(array[i]!=array.length-1){
+            cont=parseInt(array[i]+array[i+1]);
+            }else{
+                document.write(cont);
+            }
+        }
+
+        }
+
+        validacion();
+
+    </script>
+</html>

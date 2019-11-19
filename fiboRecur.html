@@ -1,0 +1,38 @@
+<html>
+<script>
+
+var num1;
+num1=parseInt(prompt('Ingrese un numero',''));
+
+
+
+// function fibonacci(num1)
+//         {
+//             var var1 = 0;
+//             var var2 = 1;
+//             var var3;
+ 
+//             document.write(var1+"");
+//             document.write(var2+"");
+ 
+//             for(var i=3; i <= num1;i++)
+//             {
+//                 var3 = var1 + var2;
+//                 var1 = var2;
+//                 var2 = var3;
+//                 document.write(var3+"","<br>");
+//             }
+//         }
+
+function fib(num1){
+  if(num1 < 2) return num1;
+  
+  return fib(num1-1) + fib(num1-2);
+}
+
+document.write(fib(num1));
+//fibonacci(num1);
+
+</script>
+
+</html>

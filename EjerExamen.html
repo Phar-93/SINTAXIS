@@ -22,8 +22,7 @@ let valor1 = document.getElementById("texto1").value;
 let valor2 = document.getElementById("textaAREA").value;
 
 var n = valor2.indexOf(valor1);
-var newstr="";
-newstr = valor2.replace(valor1, valor, "gi");
+var newstr = valor2.replace(valor1, valor, "gi");
 while(n!=-1){  
     newstr = newstr.replace(valor1, valor, "gi");
     n = newstr.indexOf(valor1);

@@ -1,0 +1,42 @@
+<html>
+<script>
+
+var num1;
+num1=parseInt(prompt('Ingrese un numero',''));
+
+
+function mostrarFactorial(num1){
+let fact=1;
+
+if(num1!=0){
+    for(let i = num1;i>0;i--){
+                fact *= i;
+                document.write(i);
+                if(i>1){
+                    document.write(" * ");
+                } else {
+                    document.write(" = ");
+                }
+            }
+}
+document.write(fact + "\n");
+
+}
+function factorialRecur(num1){
+
+    if(num1<=1){
+        return 1;
+    }else{
+        return num1 * mostrarFactorial(num1-1);
+    }
+}
+
+
+        if (num1>-1) {
+            mostrarFactorial(num1);
+        }   
+        document.write("\nFin del programa");
+
+        document.write(factorialRecur(num1));
+</script>
+</html>
