@@ -1,53 +1,18 @@
+</<!DOCTYPE html>
 <html>
+<head>
+  <title>Ejercicio 22: Repetidos</title>
+  <meta charset="utf-8"/>  
+</head>
 <body>
-        <H1>EJEMPLO DE CAPTURA ERROR</H1>
-        <input id="uni" name="uni"  type="text" />
-        <label>Introduce un numero: </label>
-        <input type="button" name="Mostrar" value="Mostrar" onclick="Mostrar();"/><br>
-        <input type="button" name="repe" value="repe" onclick="repe();"/><br>
-        <p id="resul"></p>
-<script>
-    a1 = new Array();
+  <h1>Ejercicio 22: Repetidos</h1>
+  Introduce un número: <br/>
+  <input type="text" id="num" value="" placeholder="Entero" onfocus="cleanData ()" />
+  <button id="addButton" onclick="addNumber (document.getElementById ('num'));">Añade número</button>
 
-    function Mostrar(){
-    var num, cont;
-    var num = document.getElementById("resul");
-    num.innerHTML="";
-        var cont = document.getElementById("uni").value;
-        try {
-            if(isNaN(cont)){
-                throw "No es un numero entero!"
-            }
-        } catch (error) {
-            num.style.color = "red";
-            num.innerHTML = "Error "+ error;
-        }
-        a1.push(parseInt(cont));
-        return a1;
-    }
+  <br/><br/>
 
-//funcion repetidos
-function repe() {
-var tama = a1.length;
-var indices=false;
-var repe=0;
-var j=0;
-for (var i = 0; i < tama-1; i++) {
-j=i+1;
-indices=false;
-    while (j<tama && indices==false) {
-        if(a1[i] === a1[j]){
-            repe+=1;
-            j++;
-        }else{
-           indices=true;
-        }
-       
-    }
-}
-document.getElementById("resul").innerHTML+="El numero de repetidos es: "+repe+"<br>";
-}
-
-</script>
+  <p id="resultado"></p> 
+  <script src="ejercicio22.js"></script>
 </body>
 </html>
