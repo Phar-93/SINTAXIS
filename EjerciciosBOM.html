@@ -1,0 +1,97 @@
+<html>
+    <p id="resultado"></p>
+    <p id="res2"></p>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="lista"></p>
+    <button onclick="abrirVentana()" >Abrir</button>
+    <button onclick="cerrarVentana()" >Cerrar</button>
+    <button onclick="URL()" >url</button>
+    <script>
+ var ventana; //VARIABLE VENTANA
+
+var x = document.getElementById("demo");
+window.onload = redimension();
+window.addEventListener("resize", redimension); //calcular tamaño pagina
+        function redimension(){
+        var w = window.outerWidth;
+       var h = window.outerHeight;
+        document.getElementById("resultado").innerHTML="Altura: "+h+"<br>"+"Ancho: "+w+"</br>"+"Posicion de X: "+screenX;
+        }
+        window.onload = ejer4();
+window.onload = ejer3();    
+window.onload=getLocation();   
+window.onload=showPosition();
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+// ----------------------------------------------------------------------------------------------------------------
+
+
+function ejer3(){
+    document.getElementById("demo2").innerHTML="Protocolo: "+location.protocol+"<br>"+"Direccion pagina: "+location.href+"<br>"+
+    " Host: "+location.hostname+"<br>"+" Localizacion del fichero: "+location.pathname+"<br>";
+}
+
+function ejer4(){
+var lista2 = document.getElementById("lista");
+var ul = document.createElement("ul");
+var li = document.createElement("li");
+
+ul.appendChild(li);
+li.appendChild(document.createTextNode(location.protocol));
+
+li = document.createElement("li");// ESTO ES
+ul.appendChild(li); //PARA CREAR LOS PUNTOS DE LA LISTA
+li.appendChild(document.createTextNode(location.href));
+
+li = document.createElement("li");
+ul.appendChild(li);
+li.appendChild(document.createTextNode(location.hostname));
+
+li = document.createElement("li");
+ul.appendChild(li);
+li.appendChild(document.createTextNode(location.pathname));
+
+ul.appendChild(li);
+lista2.appendChild(ul);
+
+}
+
+
+function abrirVentana (){
+            
+    ventana = window.open("nuevaVentana.html", "TITULO DE PRUEBA", "resizable=yes,left=500, top=300,width=500, height=300, toolbar=no, menubar=no, titlebar=yes");
+    ventana.document.getElementById("resultado1").innerHTML="jelouuuuu";  
+    ventana.document.write("<h2>Nueva ventana </h2>");
+    ventana.document.title= "Nueva Ventana";
+    ventana.focus();    
+}
+
+function cerrarVentana(){
+    ventana.close();
+ }
+
+ function URL(){
+    
+    var url = window.prompt("URL: ","https://www.marca.com/");
+
+    abrirVentana();
+
+ventana.location.assign(url);
+ventana.focus();
+ }
+
+
+    </script>
+</html>
